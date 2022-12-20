@@ -7,7 +7,9 @@ struct Block{
 	char[256] hash;
 	char[256] pre_hash;
 	uint64_t time;
-	char* data;
+	uint8_t* data;
 }
 
+Block* create_block(char* pre_hash, uint8_t* data);
+char* calc_hash(Block* block);
 #endif
